@@ -171,6 +171,12 @@
     visibility: hidden;
 }
 
+/* The edit composer's autocomplete pops out above the composer, so the body
+   slot must not clip it while editing. */
+.root.stateEditing .slotBody > * {
+    overflow: visible;
+}
+
 .root.stateInfo {
     padding-top: 0;
     font-size: var(--cpd-font-size-body-sm);

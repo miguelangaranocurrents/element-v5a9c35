@@ -41,6 +41,12 @@
     display: flex;
 }
 
+/* Let the body shrink to the tile width so wide content (e.g. code blocks)
+   scrolls inside its own box instead of widening the whole message. */
+.annotated > :not(.annotation) {
+    min-width: 0;
+}
+
 .annotatedInline {
     display: inline-flex;
 }
